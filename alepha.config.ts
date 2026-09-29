@@ -24,10 +24,9 @@ export default defineConfig({
   // `alepha verify` is the one command worth running on a pull request: it
   // chains clean, lint, typecheck, test, migration check and build.
   //
-  // build: {
-  //   target: "docker",
-  //   runtime: "node",
-  // },
+  build: {
+    runtime: "workerd",
+  },
   //
   // Build metadata (version, commit, build date, runtime) is resolved for you
   // and served on `GET /version`, readable anywhere as `alepha.meta`. The
