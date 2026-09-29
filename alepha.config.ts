@@ -1,5 +1,5 @@
 import { defineConfig } from "alepha/cli/config";
-// import { cloudflare, platform } from "alepha/cli/platform";
+import { cloudflare, platform } from "alepha/cli/platform";
 
 export default defineConfig({
   //
@@ -49,4 +49,11 @@ export default defineConfig({
   //     },
   //   }),
   // ],
+  plugins: [
+    platform({
+      environments: {
+        production: cloudflare(), // uses *.workers.dev, no custom domain set
+      },
+    }),
+  ],
 });
