@@ -7,9 +7,10 @@ export interface HomeProps {
 
 const Home = (_props: HomeProps) => {
   return (
-    <>
+    <div className="flex gap-4 p-6">
       <Link href="/hello">Go to Hello</Link>
-    </>
+      <Link href="/posts">Go to Posts</Link>
+    </div>
   );
 };
 

@@ -2,9 +2,7 @@
   "version": "7",
   "dialect": "sqlite",
   "id": "05eb3488-e975-432b-94cf-e5962d1898a9",
-  "prevIds": [
-    "00000000-0000-0000-0000-000000000000"
-  ],
+  "prevIds": ["00000000-0000-0000-0000-000000000000"],
   "ddl": [
     {
       "name": "alepha_sequences",
@@ -71,9 +69,7 @@
       "table": "alepha_sequences"
     },
     {
-      "columns": [
-        "id"
-      ],
+      "columns": ["id"],
       "nameExplicit": false,
       "name": "alepha_sequences_pk",
       "table": "alepha_sequences",
