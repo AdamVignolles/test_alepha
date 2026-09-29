@@ -30,4 +30,21 @@ export class PostController {
     },
     handler: ({ body }) => this.posts.create(body),
   });
+
+  deletePost = $action({
+    method: "DELETE",
+    path: "/posts/:id", // -> DELETE /api/posts/:id
+    schema: {
+      params: z.object({
+        id: z.text(),
+      }),
+      response: z.object({
+        success: z.boolean(),
+      }),
+    },
+    handler: async ({ params }) => {
+      await this.posts.deleteById(params.id);
+      return { success: true };
+    },
+  });
 }

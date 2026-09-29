@@ -1,16 +1,19 @@
-import { Link } from "alepha/react/router";
+import NavBar from "./NavBar.tsx";
 
 export interface HomeProps {
   appName: string;
   serverTime: string;
 }
 
-const Home = (_props: HomeProps) => {
+const Home = ({ appName, serverTime }: HomeProps) => {
   return (
-    <div className="flex gap-4 p-6">
-      <Link href="/hello">Go to Hello</Link>
-      <Link href="/posts">Go to Posts</Link>
-    </div>
+    <>
+      <NavBar />
+      <div className="mx-auto max-w-3xl p-6">
+        <h1 className="font-bold text-2xl">{appName}</h1>
+        <p className="mt-2 text-gray-500">Server time: {serverTime}</p>
+      </div>
+    </>
   );
 };
 
