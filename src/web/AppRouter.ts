@@ -12,7 +12,7 @@ export class AppRouter {
     loader: () => this.api.hello(),
   });
 
-  hello = $page({
+  helloPage = $page({
     path: "/hello",
     lazy: () => import("./components/Hello.tsx"),
     loader: () => this.api.hello(),
